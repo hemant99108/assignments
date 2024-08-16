@@ -15,20 +15,6 @@ const jwtPassword = 'secret';
  */
 function signJwt(username, password) {
     // Your code here
-    const usernameResponse=emailSchema.safeParse(username);
-    const passwordResponse=passwordSchema.safeParse(password);
-
-    if(!usernameResponse.success || !passwordResponse.success){
-        return nulll;
-    }
-
-    
-    const signature= jwt.sign({
-        username
-    },jwtPassword);
-
-    return signature;
-    
 }
 
 /**
@@ -40,15 +26,7 @@ function signJwt(username, password) {
  *                    using the secret key.
  */
 function verifyJwt(token) {
-  
-    let ans=true;
-    try {
-        jwt.verify(jwtPassword,token);
-    } catch (error) {
-        ans=false;
-    }
-
-    return ans;
+    // Your code here
 }
 
 /**
@@ -59,14 +37,7 @@ function verifyJwt(token) {
  *                         Returns false if the token is not a valid JWT format.
  */
 function decodeJwt(token) {
-     const decoded=jwt.decode(token);
-
-     if(decoded){
-        return true;
-     }
-     else{
-        return false;
-     }
+    // Your code here
 }
 
 
