@@ -26,7 +26,7 @@ function verifyJwt(token) {
     } catch(e) {
        ans = false;
     }
-    return ans;
+    return  ans;
 }
 
 function decodeJwt(token) {
