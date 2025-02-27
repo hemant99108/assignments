@@ -5,7 +5,10 @@
 */
 
 function isAnagram(str1, str2) {
+  str1=sort(str1);
+  str2=sort(str2);
 
+  return str1 === str2;
 }
 
 module.exports = isAnagram;
